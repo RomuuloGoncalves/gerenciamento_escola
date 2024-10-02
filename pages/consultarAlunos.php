@@ -14,10 +14,22 @@ $resultado = $alunos->listarAlunos(); // Chama o método que retorna os alunos
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style/default.css">
   <link rel="stylesheet" href="../assets/style/consultarAlunos.css">
+  <link rel="stylesheet" href="../assets/style/header.css">
+
   <title>Consultar alunos</title>
 </head>
 
 <body>
+  <header>
+    <div class="voltar">
+      <a href="../index.php">
+
+        <!-- <img src="../assets/imgs/voltar.png" alt="voltar"> -->
+        <label>VOLTAR</label>
+      </a>
+    </div>
+  </header>
+
   <main>
     <table>
       <thead>
