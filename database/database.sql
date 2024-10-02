@@ -2,33 +2,33 @@ DROP DATABASE IF EXISTS gerenciamento_escola;
 CREATE DATABASE gerenciamento_escola;      
 USE gerenciamento_escola;
 
-DROP TABLE IF EXISTS aluno;
-CREATE TABLE aluno (
+DROP TABLE IF EXISTS alunos;
+CREATE TABLE alunos (
     id_aluno INT PRIMARY KEY NOT NULL,
     nome_aluno VARCHAR(100) NOT NULL,
     cpf_aluno VARCHAR(11) NOT NULL,
     data_nasc DATE
 );
 
-DROP TABLE IF EXISTS turma;
-CREATE TABLE turma (
+DROP TABLE IF EXISTS turmas;
+CREATE TABLE turmas (
     id_turma INT PRIMARY KEY NOT NULL,
     ano INT NOT NULL,
     numero_vagas INT NOT NULL,
     desc_turma VARCHAR(100)
 );
 
-DROP TABLE IF EXISTS aluno_turma;
-CREATE TABLE aluno_turma (
+DROP TABLE IF EXISTS alunos_turmas;
+CREATE TABLE alunos_turmas (
     id_aluno INT NOT NULL,
     id_turma INT NOT NULL,
     data_matricula DATE,
-    FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
-    FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
+    FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno),
+    FOREIGN KEY (id_turma) REFERENCES turmas(id_turma)
 );
 
 -- Inserindo 20 alunos
-INSERT INTO aluno (id_aluno, nome_aluno, cpf_aluno, data_nasc) VALUES
+INSERT INTO alunos (id_aluno, nome_aluno, cpf_aluno, data_nasc) VALUES
 (1, 'Ana Silva', '12345678901', '2005-05-15'),
 (2, 'Bruno Oliveira', '12345678902', '2006-06-20'),
 (3, 'Carlos Santos', '12345678903', '2005-07-30'),
@@ -51,7 +51,7 @@ INSERT INTO aluno (id_aluno, nome_aluno, cpf_aluno, data_nasc) VALUES
 (20, 'Yasmin Santos', '12345678920', '2005-12-15');
 
 -- Inserindo 20 turmas
-INSERT INTO turma (id_turma, ano, numero_vagas, desc_turma) VALUES
+INSERT INTO turmas (id_turma, ano, numero_vagas, desc_turma) VALUES
 (1, 2024, 30, 'Turma A - 1º Ano'),
 (2, 2024, 30, 'Turma B - 1º Ano'),
 (3, 2024, 25, 'Turma A - 2º Ano'),
@@ -74,7 +74,7 @@ INSERT INTO turma (id_turma, ano, numero_vagas, desc_turma) VALUES
 (20, 2024, 10, 'Turma D - 5º Ano');
 
 -- Inserindo 20 matrículas de alunos em turmas
-INSERT INTO aluno_turma (id_aluno, id_turma, data_matricula) VALUES
+INSERT INTO alunos_turmas (id_aluno, id_turma, data_matricula) VALUES
 (1, 1, '2024-01-10'),
 (2, 1, '2024-01-11'),
 (3, 2, '2024-01-12'),

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/default.css">
+    <link rel="stylesheet" href="../assets/style/cadastro.css">
+    <title>Cadastrar Aluno</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="title">Cadastrar Turma</div>
+        <form action="cadastrar_aluno.php" method="POST">
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+
+            <div class="campo">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf">
+            </div>
+
+            <div class="campo">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento">
+            </div>
+
+            <div class="campo">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
