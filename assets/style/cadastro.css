@@ -36,14 +36,20 @@ label{
     font-size: 1.5rem;
 }
 
-input{
+input, textarea{
     padding: 10px;
     font-size: 1.2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: 0;
 }
 
+.erro{
+    color: #ff0000;
+    font-weight: 600;
+}
+
 button{
+    width: 100%;
     background-color: #000000;
     color: #ffff;
     padding: 20px;

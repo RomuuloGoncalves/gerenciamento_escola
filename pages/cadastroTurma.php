@@ -12,25 +12,28 @@
 <body>
     <div class="container">
         <div id="title">Cadastrar Turma</div>
-        <form action="cadastrar_aluno.php" method="POST">
+        <form action="cadastrar_turma.php" method="POST">
             <div class="campo">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+                <label for="nome_turma">Nome da turma:</label>
+                <input type="text" id="nome_turma" name="nome_turma">
             </div>
 
             <div class="campo">
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf">
+                <label for="vagas">Número de vagas:</label>
+                <input type="number" id="vagas" name="vagas">
             </div>
 
             <div class="campo">
-                <label for="data_nascimento">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
             </div>
 
             <div class="campo">
-                <button type="submit">Cadastrar</button>
+                <label for="data_nascimento">Descrição</label>
+                <textarea id="data_nascimento" rows="5" name="data_nascimento"> </textarea>
             </div>
+
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
 

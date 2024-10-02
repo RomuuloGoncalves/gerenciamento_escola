@@ -12,38 +12,38 @@
     <main>
         <div class="opcoes">
             <div class="opcao">
-                <a href="/pages/cadastroAluno.html">
-                    <img src="/assets/imgs/index/aluno.png" alt="" class="icone">
+                <a href="./pages/cadastroAluno.php">
+                    <img src="./assets/imgs/index/aluno.png" alt="" class="icone">
                     <h2>Cadastrar Aluno</h2>
                 </a>
             </div>
             <div class="opcao">
-                <a href="/pages/cadastroTurma.html">
-                    <img src="/assets/imgs/index/turma.png" alt="" class="icone">
+                <a href="./pages/cadastroTurma.php">
+                    <img src="./assets/imgs/index/turma.png" alt="" class="icone">
                     <h2>Cadastrar Turma</h2>
                 </a>
             </div>
             <div class="opcao">
-                <a href="/pages/realizarMatricula.html">
-                    <img src="/assets/imgs/index/matricula.png" alt="" class="icone">
+                <a href="./pages/realizarMatricula.html">
+                    <img src="./assets/imgs/index/matricula.png" alt="" class="icone">
                     <h2>Realizar Matrícula</h2>
                 </a>
             </div>
             <div class="opcao">
-                <a href="/pages/realizarChamada.html">
-                    <img src="/assets/imgs/index/presenca.png" alt="" class="icone">
+                <a href="./pages/realizarChamada.html">
+                    <img src="./assets/imgs/index/presenca.png" alt="" class="icone">
                     <h2>Realizar Chamada</h2>
                 </a>
             </div>
             <div class="opcao">
-                <a href="/pages/consultarAlunos.html">
-                    <img src="/assets/imgs/index/consulta_aluno.png" alt="" class="icone">
+                <a href="./pages/consultarAlunos.php">
+                    <img src="./assets/imgs/index/consulta_aluno.png" alt="" class="icone">
                     <h2>Consultar Alunos</h2>
                 </a>
             </div>
             <div class="opcao">
-                <a href="/pages/consultarTurmas.html">
-                    <img src="/assets/imgs/index/consulta_turma.png" alt="" class="icone">
+                <a href="./pages/consultarTurmas.php">
+                    <img src="./assets/imgs/index/consulta_turma.png" alt="" class="icone">
                     <h2>Consultar Turmas</h2>
                 </a>
             </div>
