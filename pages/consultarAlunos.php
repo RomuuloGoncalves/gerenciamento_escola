@@ -51,7 +51,7 @@ $resultado = $alunos->listarAlunos();
             <td><?= $aluno->data_nasc ?></td>
             <td>
               <div class="icones">
-                <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
+                <a href="../functions/realizarEdicaoAluno.php?id=<?= $aluno->id_aluno ?>">
                   <img src="../assets/imgs/editar.png" alt="">
                 </a>
               </div>
@@ -59,9 +59,9 @@ $resultado = $alunos->listarAlunos();
 
             <td>
               <div class="icones">
-              <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
-                <img src="../assets/imgs/excluir.png" alt="">
-              </a>
+                <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
+                  <img src="../assets/imgs/excluir.png" alt="">
+                </a>
               </div>
             </td>
           </tr>

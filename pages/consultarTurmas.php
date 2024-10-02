@@ -50,7 +50,7 @@ $resultado = $turmas->listarTurmas();
             <td><?= $turma->ano ?></td>
             <td>
               <div class="icones">
-                <a href="../functions/realizarExclusaoTurma.php?id=<?= $turma->id_turma ?>">
+                <a href="../functions/realizarEdicaoTurma.php?id=<?= $turma->id_turma ?>">
                   <img src="../assets/imgs/editar.png" alt="">
                 </a>
               </div>
