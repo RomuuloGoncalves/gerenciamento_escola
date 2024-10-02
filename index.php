@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="opcao">
-                <a href="./pages/realizarChamada.html">
+                <a href="./pages/realizarChamada.php">
                     <img src="./assets/imgs/index/presenca.png" alt="" class="icone">
                     <h2>Realizar Chamada</h2>
                 </a>

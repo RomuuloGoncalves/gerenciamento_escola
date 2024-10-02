@@ -26,6 +26,23 @@ class Turma{
             return "Erro ao cadastrar turma: " . $e->getMessage();
         }
     }
+
+    public function selecionarTurma($id){
+        global $conn;
+
+        $sqlSelectTurma = "SELECT * FROM turmas WHERE id_turma = :id";
+        $select = $conn -> prepare($sqlSelectTurma);
+        
+        
+        try {
+            $select -> bindValue(":id", $id);
+            $resultado = $select -> execute();
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao excluir turma: " . $e->getMessage();
+        }
+    }
         
     public function listarTurmas(){
         global $conn;
