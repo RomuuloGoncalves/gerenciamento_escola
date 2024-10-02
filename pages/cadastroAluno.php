@@ -2,7 +2,7 @@
 session_start(); // Inicie a sessão para acessar os erros
 $erros = isset($_SESSION['erros']) ? $_SESSION['erros'] : [];
 $dados = isset($_SESSION['dados']) ? $_SESSION['dados'] : [];
-session_unset(); // Limpa os erros após exibi-los
+session_unset(); // Limpa os erros após acessar os erros
 ?>
 
 <!DOCTYPE html>
