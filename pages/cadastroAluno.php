@@ -22,8 +22,6 @@ session_unset(); // Limpa os erros após acessar os erros
     <header>
         <div class="voltar">
             <a href="../index.php">
-
-                <!-- <img src="../assets/imgs/voltar.png" alt="voltar"> -->
                 <label>VOLTAR</label>
             </a>
         </div>

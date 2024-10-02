@@ -3,8 +3,7 @@ include '../Controllers/TurmaTabela.php';
 include '../lib/conn.php';
 
 $turmas = new Turma();
-$resultado = $turmas->listarTurmas(); // Chama o método que retorna os alunos
-
+$resultado = $turmas->listarTurmas();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,7 +12,7 @@ $resultado = $turmas->listarTurmas(); // Chama o método que retorna os alunos
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style/default.css">
-  <link rel="stylesheet" href="../assets/style/consultarAlunos.css">
+  <link rel="stylesheet" href="../assets/style/consultas.css">
   <link rel="stylesheet" href="../assets/style/header.css">
 
   <title>Consultar Turmas</title>
@@ -23,8 +22,6 @@ $resultado = $turmas->listarTurmas(); // Chama o método que retorna os alunos
   <header>
     <div class="voltar">
       <a href="../index.php">
-
-        <!-- <img src="../assets/imgs/voltar.png" alt="voltar"> -->
         <label>VOLTAR</label>
       </a>
     </div>
@@ -53,14 +50,17 @@ $resultado = $turmas->listarTurmas(); // Chama o método que retorna os alunos
             <td><?= $turma->ano ?></td>
             <td>
               <div class="icones">
-
-                <img src="../assets/imgs/editar.png" alt="">
+                <a href="../functions/realizarExclusaoTurma.php?id=<?= $turma->id_turma ?>">
+                  <img src="../assets/imgs/editar.png" alt="">
+                </a>
               </div>
             </td>
 
             <td>
               <div class="icones">
-                <img src="../assets/imgs/excluir.png" alt="">
+                <a href="../functions/realizarExclusaoTurma.php?id=<?= $turma->id_turma ?>">
+                  <img src="../assets/imgs/excluir.png" alt="">
+                </a>
               </div>
             </td>
           </tr>

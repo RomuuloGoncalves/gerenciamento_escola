@@ -49,4 +49,37 @@ class Aluno {
     public function deletarAluno() {
         
     }
+
+    public function excluirAluno($id){
+        global $conn;
+
+        $sqlDeleteAluno = "DELETE FROM alunos WHERE id_aluno = :id";
+        $delete = $conn -> prepare($sqlDeleteAluno);
+        
+        
+        try {
+            $delete -> bindValue(":id", $id);
+            $resultado = $delete -> execute();
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao excluir aluno: " . $e->getMessage();
+        }
+    }
+
+    public function excluirRegistrosAssociados($id) {
+        global $conn;
+    
+        $sqlDeleteAssociados = "DELETE FROM alunos_turmas WHERE id_aluno = :id";
+        $deleteAssociados = $conn->prepare($sqlDeleteAssociados);
+        $deleteAssociados->bindValue(":id", $id);
+        
+        try {
+            return $deleteAssociados->execute();
+        } catch (PDOException $e) {
+            echo "Erro ao excluir registros associados: " . $e->getMessage();
+            return false;
+        }
+    }
+    
 }

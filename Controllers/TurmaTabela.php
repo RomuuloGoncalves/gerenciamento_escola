@@ -26,9 +26,7 @@ class Turma{
             return "Erro ao cadastrar turma: " . $e->getMessage();
         }
     }
-    
-    
-
+        
     public function listarTurmas(){
         global $conn;
 
@@ -37,5 +35,37 @@ class Turma{
         $sqlSelectTurmas->execute();
         $resultado = $sqlSelectTurmas->fetchAll(PDO::FETCH_OBJ); 
         return $resultado;
+    }
+
+    public function excluirTurma($id){
+        global $conn;
+
+        $sqlDeleteTurmas = "DELETE FROM turmas WHERE id_turma = :id";
+        $delete = $conn -> prepare($sqlDeleteTurmas);
+        
+        
+        try {
+            $delete -> bindValue(":id", $id);
+            $resultado = $delete -> execute();
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao excluir turma: " . $e->getMessage();
+        }
+    }
+
+    public function excluirRegistrosAssociados($id) {
+        global $conn;
+    
+        $sqlDeleteAssociados = "DELETE FROM alunos_turmas WHERE id_turma = :id";
+        $deleteAssociados = $conn->prepare($sqlDeleteAssociados);
+        $deleteAssociados->bindValue(":id", $id);
+        
+        try {
+            return $deleteAssociados->execute();
+        } catch (PDOException $e) {
+            echo "Erro ao excluir registros associados: " . $e->getMessage();
+            return false;
+        }
     }
 }

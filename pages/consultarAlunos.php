@@ -3,7 +3,7 @@ include '../Controllers/AlunoTabela.php';
 include '../lib/conn.php';
 
 $alunos = new Aluno();
-$resultado = $alunos->listarAlunos(); // Chama o método que retorna os alunos
+$resultado = $alunos->listarAlunos();
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $resultado = $alunos->listarAlunos(); // Chama o método que retorna os alunos
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style/default.css">
-  <link rel="stylesheet" href="../assets/style/consultarAlunos.css">
+  <link rel="stylesheet" href="../assets/style/consultas.css">
   <link rel="stylesheet" href="../assets/style/header.css">
 
   <title>Consultar alunos</title>
@@ -23,8 +23,6 @@ $resultado = $alunos->listarAlunos(); // Chama o método que retorna os alunos
   <header>
     <div class="voltar">
       <a href="../index.php">
-
-        <!-- <img src="../assets/imgs/voltar.png" alt="voltar"> -->
         <label>VOLTAR</label>
       </a>
     </div>
@@ -53,14 +51,17 @@ $resultado = $alunos->listarAlunos(); // Chama o método que retorna os alunos
             <td><?= $aluno->data_nasc ?></td>
             <td>
               <div class="icones">
-
-                <img src="../assets/imgs/editar.png" alt="">
+                <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
+                  <img src="../assets/imgs/editar.png" alt="">
+                </a>
               </div>
             </td>
 
             <td>
               <div class="icones">
+              <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
                 <img src="../assets/imgs/excluir.png" alt="">
+              </a>
               </div>
             </td>
           </tr>
