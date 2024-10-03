@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
 
     $_SESSION['alunos'] = $alunos;
     
-    header('Location: ../pages/realizarChamada.php');
+    header('Location: ../pages/realizarChamada.php?id='.$id_turma);
 } else {
     $_SESSION['erro'] = "Nenhuma turma foi selecionada!";
     header('Location: ../pages/realizarChamada.php');

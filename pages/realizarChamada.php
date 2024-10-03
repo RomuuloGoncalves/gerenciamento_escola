@@ -8,6 +8,7 @@ $resultadoTurmas = $turmas->listarTurmas();
 
 session_start();
 $alunos = isset($_SESSION['alunos']) ? $_SESSION['alunos'] : [];
+$id_turma = (int) $_GET['id'];
 
 session_unset();
 
@@ -53,31 +54,38 @@ session_unset();
         </form>
 
         <?php if (!empty($alunos)) { ?>
-            <table>
-                <thead>
-                    <tr>
-                        <td scope="col">Nome</td>
-                        <td scope="col">Data de Nascimento</td>
-                        <td scope="col">Presença</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($alunos as $aluno) {
-                    ?>
+            <form id="realizarChamada" action="../functions/concluirChamada.php" method="POST">
+                <input type="hidden" name="id_turma" value="<?= $id_turma ?>">
+                <table id="tabela_chamada">
+                    <thead>
                         <tr>
-                            <td><?= $aluno->nome_aluno ?></td>
-                            <td><?= $aluno->data_nasc ?></td>
-                            <td class="checkbox_centro">
-                                <input class="checkbox" type="checkbox" name="presenca[<?= $aluno->id_aluno ?>]" value="presente">
-                            </td>
+                            <td scope="col">Nome</td>
+                            <td scope="col">Data de Nascimento</td>
+                            <td scope="col">Presença</td>
                         </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($alunos as $aluno) {
+                        ?>
+                            <tr>
+                                <td><?= $aluno->nome_aluno ?></td>
+                                <td><?= $aluno->data_nasc ?></td>
+                                <td class="checkbox_centro">
+                                    <!-- Campo oculto para ausência -->
+                                    <input type="hidden" name="presenca[<?= $aluno->id_aluno ?>]" value="ausente">
+                                    <!-- Checkbox para presença -->
+                                    <input class="checkbox" type="checkbox" name="presenca[<?= $aluno->id_aluno ?>]" value="presente">
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <button type="submit">Finalizar</button>
+            </form>
 
-            </table>
         <?php } else { ?>
             <p>Nenhum aluno encontrado para essa turma.</p>
         <?php } ?>

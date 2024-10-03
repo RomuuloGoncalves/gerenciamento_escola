@@ -6,15 +6,6 @@ class Aluno {
     public $nome_aluno;
     public $cpf_aluno;
     public $data_nasc;
-    // private $conn;
-
-
-    public function __construct() {
-        // $this->conn = $conn;
-        // $this->nome_aluno = $nome;
-        // $this->cpf_aluno = $cpf;
-        // $this->data_nasc = $data_nasc;
-    }
 
     public function cadastrarAluno() {
         global $conn;

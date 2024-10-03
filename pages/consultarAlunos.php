@@ -29,7 +29,7 @@ $resultado = $alunos->listarAlunos();
   </header>
 
   <main>
-    <table>
+    <table id="tabelas_consultas">
       <thead>
         <tr>
           <td scope="col">#id</td>

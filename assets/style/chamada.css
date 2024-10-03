@@ -15,6 +15,7 @@ main{
     flex-direction: column;
     width: 50%;
     gap: 10px;
+    margin-bottom: 5vh;
 }
 
 #formSelect label{
@@ -25,7 +26,8 @@ main{
     font-size: 1.2rem;
 }
 
-#formSelect button{
+form button{
+    width: 100%;
     padding: 20px;
     background-color: #000;
     border: none;
@@ -48,4 +50,13 @@ input[type=radio], input[type=checkbox]  {
 p{
     font-size: 2rem;
     margin: 30px 0;
+}
+
+#realizarChamada{
+    width: 100%;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

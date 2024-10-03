@@ -4,10 +4,14 @@ main {
     align-items: center;
 }
 
+#tabelas_consultas{
+    margin: 50px;
+}
+
 table {
+    width: 100%;
     background-color: rgba(223, 222, 222, 0.411);
     font-size: 1.2rem;
-    margin: 50px;
 }
 
 

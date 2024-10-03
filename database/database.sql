@@ -28,6 +28,17 @@ CREATE TABLE alunos_turmas (
     FOREIGN KEY (id_turma) REFERENCES turmas(id_turma)
 );
 
+DROP TABLE IF EXISTS chamadas;
+CREATE TABLE chamadas (
+    id_chamada INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id_aluno_chamada INT NOT NULL,
+    id_turma_chamada INT NOT NULL,
+    aluno_presente BOOLEAN DEFAULT 1,
+    data_chamada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_aluno_chamada) REFERENCES alunos_turmas(id_aluno),
+    FOREIGN KEY (id_turma_chamada) REFERENCES alunos_turmas(id_turma)
+);
+
 -- Inserindo 20 alunos
 INSERT INTO alunos (nome_aluno, cpf_aluno, data_nasc) VALUES
 ('Ana Silva', '12345678901', '2005-05-15'),
