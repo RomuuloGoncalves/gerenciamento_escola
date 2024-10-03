@@ -45,7 +45,7 @@ if (!empty($erros)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2;url=../pages/cadastroAluno.php"> <!-- Redireciona após 2 segundos -->
+    <meta http-equiv="refresh" content="2;url=../pages/cadastroAluno.php"> 
     <title>Cadastro de Aluno</title>
     <link rel="stylesheet" href="../assets/style/feedbackAcoes.css">
 </head>

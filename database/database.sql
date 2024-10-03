@@ -12,7 +12,7 @@ CREATE TABLE alunos (
 
 DROP TABLE IF EXISTS turmas;
 CREATE TABLE turmas (
-    id_turma INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id_turma INT AUTO_INCREMENT PRIMARY KEY,
     nome_turma VARCHAR(100) NOT NULL,
     ano DATE NOT NULL,
     numero_vagas INT NOT NULL,
@@ -24,19 +24,33 @@ CREATE TABLE alunos_turmas (
     id_aluno INT NOT NULL,
     id_turma INT NOT NULL,
     data_matricula DATE,
-    FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno),
-    FOREIGN KEY (id_turma) REFERENCES turmas(id_turma)
+    FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno) ON DELETE CASCADE,
+    FOREIGN KEY (id_turma) REFERENCES turmas(id_turma) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS presencas;
+CREATE TABLE presencas (
+    id_presenca INT AUTO_INCREMENT PRIMARY KEY,
+    id_aluno_presenca INT NOT NULL,
+    aluno_presente BOOLEAN DEFAULT 1,
+    FOREIGN KEY (id_aluno_presenca) REFERENCES alunos(id_aluno) ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS chamadas;
 CREATE TABLE chamadas (
-    id_chamada INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    id_aluno_chamada INT NOT NULL,
+    id_chamada INT AUTO_INCREMENT PRIMARY KEY,
     id_turma_chamada INT NOT NULL,
-    aluno_presente BOOLEAN DEFAULT 1,
     data_chamada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_aluno_chamada) REFERENCES alunos_turmas(id_aluno),
-    FOREIGN KEY (id_turma_chamada) REFERENCES alunos_turmas(id_turma)
+    FOREIGN KEY (id_turma_chamada) REFERENCES alunos_turmas(id_turma) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS presenca_chamada;
+CREATE TABLE presenca_chamada (
+    id_presenca_chamada INT AUTO_INCREMENT PRIMARY KEY,
+    id_presenca INT NOT NULL,
+    id_chamada INT NOT NULL,
+    FOREIGN KEY (id_presenca) REFERENCES presencas(id_presenca) ON DELETE CASCADE,
+    FOREIGN KEY (id_chamada) REFERENCES chamadas(id_chamada) ON DELETE CASCADE
 );
 
 -- Inserindo 20 alunos
