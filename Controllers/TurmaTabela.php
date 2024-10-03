@@ -27,7 +27,7 @@ class Turma{
         }
     }
 
-    public function selecionarTurma($id){
+    public function selecionarTurmaID($id){
         global $conn;
 
         $sqlSelectTurma = "SELECT * FROM turmas WHERE id_turma = :id";
@@ -37,13 +37,15 @@ class Turma{
         try {
             $select -> bindValue(":id", $id);
             $resultado = $select -> execute();
+            $resultado = $select->fetch(PDO::FETCH_OBJ);
             
             return $resultado;
         } catch (PDOException $e) {
             return "Erro ao excluir turma: " . $e->getMessage();
         }
     }
-        
+
+         
     public function listarTurmas(){
         global $conn;
 
@@ -52,6 +54,28 @@ class Turma{
         $sqlSelectTurmas->execute();
         $resultado = $sqlSelectTurmas->fetchAll(PDO::FETCH_OBJ); 
         return $resultado;
+    }
+
+    public function editarTurma($id) {
+        global $conn;
+    
+        $sqlUpdateTurma = "UPDATE turmas SET nome_turma = :nome, ano = :ano, numero_vagas = :vagas, desc_turma = :desc_turma WHERE id_turma = :id";
+        $update = $conn->prepare($sqlUpdateTurma);
+    
+        try {
+            // Bind dos valores
+            $update->bindValue(":id", $id);
+            $update->bindValue(':nome', $this->nome_turma);
+            $update->bindValue(':ano', $this->ano);
+            $update->bindValue(':vagas', $this->numero_vagas);
+            $update->bindValue(':desc_turma', $this->desc_turma);
+            
+            $resultado = $update->execute();
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao editar turma: " . $e->getMessage();
+        }
     }
 
     public function excluirTurma($id){

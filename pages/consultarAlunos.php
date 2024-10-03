@@ -51,7 +51,7 @@ $resultado = $alunos->listarAlunos();
             <td><?= $aluno->data_nasc ?></td>
             <td>
               <div class="icones">
-                <a href="../functions/realizarEdicaoAluno.php?id=<?= $aluno->id_aluno ?>">
+                <a href="../pages/editarAluno.php?id=<?= $aluno->id_aluno ?>">
                   <img src="../assets/imgs/editar.png" alt="">
                 </a>
               </div>

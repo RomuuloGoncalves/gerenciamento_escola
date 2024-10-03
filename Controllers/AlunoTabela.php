@@ -34,8 +34,6 @@ class Aluno {
         }
     }
     
-    
-
     public function listarAlunos() {
         global $conn;
 
@@ -46,10 +44,45 @@ class Aluno {
         return $resultado;
     }
 
-    public function deletarAluno() {
-        
+    public function selecionarAlunoID($id) {
+        global $conn;
+
+        $sqlSelectAluno = "SELECT * FROM alunos WHERE id_aluno = :id";
+
+        $select = $conn->prepare($sqlSelectAluno);
+
+        try {
+            $select->bindValue(":id", $id);
+            $select->execute();
+            $resultado = $select->fetch(PDO::FETCH_OBJ);
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao selecionar alunos da turma: " . $e->getMessage();
+        }
     }
 
+    public function editarAluno($id) {
+        global $conn;
+    
+        $sqlUpdateAluno = "UPDATE alunos SET nome_aluno = :nome, cpf_aluno = :cpf, data_nasc = :data_nasc WHERE id_aluno = :id";
+        $update = $conn->prepare($sqlUpdateAluno);
+    
+        try {
+            // Bind dos valores
+            $update->bindValue(":id", $id);
+
+            $update->bindValue(':nome', $this->nome_aluno);
+            $update->bindValue(':cpf', $this->cpf_aluno);
+            $update->bindValue(':data_nasc', $this->data_nasc);
+            $resultado = $update->execute();
+            
+            return $resultado;
+        } catch (PDOException $e) {
+            return "Erro ao editar aluno: " . $e->getMessage();
+        }
+    }
+    
     public function excluirAluno($id){
         global $conn;
 
