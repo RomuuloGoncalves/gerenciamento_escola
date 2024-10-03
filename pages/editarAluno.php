@@ -38,7 +38,7 @@ $resultado = $aluno->selecionarAlunoID($id);
     </header>
 
     <div class="container">
-        <div id="title">Cadastrar Aluno</div>
+        <div id="title">Editar Aluno</div>
         <form action="../functions/realizarEdicaoAluno.php" method="POST">
             <input type="hidden" id="id" name="id" value="<?php echo $resultado->id_aluno; ?>" placeholder="<?php echo $resultado->nome_aluno; ?>">
             <div class="campo">
