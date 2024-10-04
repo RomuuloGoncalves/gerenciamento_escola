@@ -1,11 +1,21 @@
 main {
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: auto;
 }
 
 #tabelas_consultas{
-    margin: 50px;
+    margin: 25px 50px;
+}
+
+#pesquisaInput{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.1rem;
 }
 
 table {

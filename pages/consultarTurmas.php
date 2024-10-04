@@ -14,7 +14,6 @@ $resultado = $turmas->listarTurmas();
   <link rel="stylesheet" href="../assets/style/default.css">
   <link rel="stylesheet" href="../assets/style/consultas.css">
   <link rel="stylesheet" href="../assets/style/header.css">
-
   <title>Consultar Turmas</title>
 </head>
 
@@ -28,6 +27,7 @@ $resultado = $turmas->listarTurmas();
   </header>
 
   <main>
+  <input type="text" id="pesquisaInput" onkeyup="filtrarTabela()" placeholder="Pesquisar por nome...">
     <table id="tabelas_consultas">
       <thead>
         <tr>
@@ -72,6 +72,8 @@ $resultado = $turmas->listarTurmas();
       </tbody>
     </table>
   </main>
+
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

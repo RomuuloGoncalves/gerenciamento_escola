@@ -15,7 +15,6 @@ $resultado = $alunos->listarAlunos();
   <link rel="stylesheet" href="../assets/style/default.css">
   <link rel="stylesheet" href="../assets/style/consultas.css">
   <link rel="stylesheet" href="../assets/style/header.css">
-
   <title>Consultar alunos</title>
 </head>
 
@@ -29,6 +28,7 @@ $resultado = $alunos->listarAlunos();
   </header>
 
   <main>
+    <input type="text" id="pesquisaInput" onkeyup="filtrarTabela()" placeholder="Pesquisar por nome...">
     <table id="tabelas_consultas">
       <thead>
         <tr>
@@ -71,6 +71,8 @@ $resultado = $alunos->listarAlunos();
       </tbody>
     </table>
   </main>
+
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
