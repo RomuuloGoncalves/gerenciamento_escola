@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../lib/conn.php';
-include '../Controllers/ChamadaTabela.php';  
-include '../Controllers/AlunoTurmaTabela.php';  
-include '../Controllers/PresencaTabela.php';
-include '../Controllers/PresencaChamadaTabela.php';
+require '../lib/conn.php';
+require '../Controllers/ChamadaTabela.php';  
+require '../Controllers/AlunoTurmaTabela.php';  
+require '../Controllers/PresencaTabela.php';
+require '../Controllers/PresencaChamadaTabela.php';
 
 $erros = [];
 

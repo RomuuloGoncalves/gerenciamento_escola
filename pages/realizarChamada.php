@@ -1,7 +1,7 @@
 <?php
-include '../Controllers/TurmaTabela.php';
-include '../Controllers/AlunoTabela.php';
-include '../lib/conn.php';
+require '../Controllers/TurmaTabela.php';
+require '../Controllers/AlunoTabela.php';
+require '../lib/conn.php';
 
 $turmas = new Turma();
 $resultadoTurmas = $turmas->listarTurmas();

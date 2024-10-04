@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../lib/conn.php';
-include '../Controllers/AlunoTurmaTabela.php';
+require '../lib/conn.php';
+require '../Controllers/AlunoTurmaTabela.php';
 
 $erros = [];
 

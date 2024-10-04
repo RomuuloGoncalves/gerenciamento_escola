@@ -1,7 +1,7 @@
 <?php
 
-include '../Controllers/AlunoTabela.php';
-include '../lib/conn.php';
+require '../Controllers/AlunoTabela.php';
+require '../lib/conn.php';
 
 
 session_start(); // Inicie a sessão para acessar os erros

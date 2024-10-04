@@ -1,6 +1,6 @@
 <?php
-include '../Controllers/AlunoTurmaTabela.php';
-include '../lib/conn.php';
+require '../Controllers/AlunoTurmaTabela.php';
+require '../lib/conn.php';
 
 session_start(); 
 

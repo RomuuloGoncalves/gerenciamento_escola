@@ -1,5 +1,5 @@
 <?php
-include '../lib/conn.php';
+require '../lib/conn.php';
 
 class AlunoTurma {
     public $id_aluno;

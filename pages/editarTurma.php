@@ -1,7 +1,7 @@
 <?php
 
-include '../Controllers/TurmaTabela.php';
-include '../lib/conn.php';
+require '../Controllers/TurmaTabela.php';
+require '../lib/conn.php';
 
 session_start();
 $id = isset($_GET['id']) ? (int) $_GET['id'] : (int) $_SESSION['id_turma'];

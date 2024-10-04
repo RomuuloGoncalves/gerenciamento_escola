@@ -1,6 +1,6 @@
 <?php
-include '../Controllers/TurmaTabela.php';
-include '../lib/conn.php';
+require '../Controllers/TurmaTabela.php';
+require '../lib/conn.php';
 
 $turmas = new Turma();
 $resultado = $turmas->listarTurmas();
