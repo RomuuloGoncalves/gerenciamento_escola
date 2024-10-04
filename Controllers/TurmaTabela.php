@@ -63,7 +63,6 @@ class Turma{
         $update = $conn->prepare($sqlUpdateTurma);
     
         try {
-            // Bind dos valores
             $update->bindValue(":id", $id);
             $update->bindValue(':nome', $this->nome_turma);
             $update->bindValue(':ano', $this->ano);

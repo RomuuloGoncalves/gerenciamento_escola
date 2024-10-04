@@ -6,10 +6,7 @@ $id = (int) $_GET["id"];
 
 $turma = new Turma();
 
-// Excluir registros associados
 $turma->excluirRegistrosAssociados($id);
-
-// Excluir aluno
 $resultado = $turma->excluirTurma($id);
 
 if ($resultado) {

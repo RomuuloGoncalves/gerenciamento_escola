@@ -6,10 +6,7 @@ $id = (int) $_GET["id"];
 
 $aluno = new Aluno();
 
-// Excluir registros associados primeiro
 $aluno->excluirRegistrosAssociados($id);
-
-// Agora, exclua o aluno
 $resultado = $aluno->excluirAluno($id);
 
 ?>

@@ -3,13 +3,9 @@ include '../Controllers/AlunoTabela.php';
 include '../lib/conn.php';
 session_start();
 $idChamada = (int) $_SESSION['idChamada'];
-// $idChamada = 25;
-// session_unset(); 
-
 
 $alunos = new Aluno();
 $resultado = $alunos->listarAlunosComPresenca($idChamada);
-// var_dump($resultado)
 ;?>
 
 <!DOCTYPE html>

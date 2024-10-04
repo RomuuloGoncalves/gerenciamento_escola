@@ -59,3 +59,7 @@ tr:nth-child(even) {
 .icones:hover {
     cursor: pointer;
 }
+
+form#realizarChamada #tabelas_consultas{
+    margin: 0;
+}

@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div class="opcao">
-                <a href="./pages/realizarMatricula.html">
+                <a href="./pages/realizarMatricula.php">
                     <img src="./assets/imgs/index/matricula.png" alt="" class="icone">
                     <h2>Realizar Matrícula</h2>
                 </a>
