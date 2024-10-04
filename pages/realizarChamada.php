@@ -44,13 +44,10 @@ session_unset();
             <select name="id" id="turma">
                 <option selected>Selecionar</option>
 
-                <?php
-                foreach ($resultadoTurmas as $turma) {
-                ?>
-                    <option value="<?= $turma->id_turma ?>"><?= $turma->nome_turma ?></option>
-                <?php
-                }
-                ?>
+                <?php foreach ($resultadoTurmas as $turma): ?>
+                    <option value="<?= $turma->id_turma; ?>"><?= $turma->nome_turma; ?></option>
+                <?php endforeach; ?>
+
             </select>
             <button type="submit">Selecionar</button>
         </form>
@@ -67,22 +64,18 @@ session_unset();
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        foreach ($alunos as $aluno) {
-                        ?>
+                        <?php foreach ($alunos as $aluno): ?>
                             <tr>
-                                <td><?= $aluno->nome_aluno ?></td>
-                                <td><?= $aluno->data_nasc ?></td>
+                                <td><?= $aluno->nome_aluno; ?></td>
+                                <td><?= $aluno->data_nasc; ?></td>
                                 <td class="checkbox_centro">
                                     <!-- Campo oculto para ausência -->
-                                    <input type="hidden" name="presenca[<?= $aluno->id_aluno ?>]" value="ausente">
+                                    <input type="hidden" name="presenca[<?= $aluno->id_aluno; ?>]" value="ausente">
                                     <!-- Checkbox para presença -->
-                                    <input class="checkbox" type="checkbox" name="presenca[<?= $aluno->id_aluno ?>]" value="presente">
+                                    <input class="checkbox" type="checkbox" name="presenca[<?= $aluno->id_aluno; ?>]" value="presente">
                                 </td>
                             </tr>
-                        <?php
-                        }
-                        ?>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
                 <button type="submit">Finalizar</button>

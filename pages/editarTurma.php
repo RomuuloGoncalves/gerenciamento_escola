@@ -39,30 +39,30 @@ $resultado = $turma->selecionarTurmaID($id);
     <div class="container">
         <div id="title">Editar Turma</div>
         <form action="../functions/realizarEdicaoTurma.php" method="POST">
-            <input type="hidden" id="id" name="id" value="<?php echo $resultado->id_turma; ?>">
+            <input type="hidden" id="id" name="id" value="<?= $resultado->id_turma; ?>">
 
             <div class="campo">
                 <label class="label_formulario" for="nome">Nome da turma:</label>
-                <input type="text" id="nome" name="nome" value="<?php echo $resultado->nome_turma; ?>" placeholder="Nome da turma">
-                <span class="erro"><?php echo isset($erros['nome']) ? $erros['nome'] : ''; ?></span>
+                <input type="text" id="nome" name="nome" value="<?= $resultado->nome_turma; ?>" placeholder="Nome da turma">
+                <span class="erro"><?= isset($erros['nome']) ? $erros['nome'] : ''; ?></span>
             </div>
 
             <div class="campo">
                 <label class="label_formulario" for="ano">Ano:</label>
-                <input type="date" id="data" name="data" value="<?php echo $resultado->ano; ?>" placeholder="Ano da turma">
-                <span class="erro"><?php echo isset($erros['ano']) ? $erros['ano'] : ''; ?></span>
+                <input type="date" id="data" name="data" value="<?= $resultado->ano; ?>" placeholder="Ano da turma">
+                <span class="erro"><?= isset($erros['ano']) ? $erros['ano'] : ''; ?></span>
             </div>
 
             <div class="campo">
                 <label class="label_formulario" for="vagas">Número de vagas:</label>
-                <input type="number" id="vagas" name="vagas" value="<?php echo $resultado->numero_vagas; ?>" placeholder="Número de vagas">
-                <span class="erro"><?php echo isset($erros['vagas']) ? $erros['vagas'] : ''; ?></span>
+                <input type="number" id="vagas" name="vagas" value="<?= $resultado->numero_vagas; ?>" placeholder="Número de vagas">
+                <span class="erro"><?= isset($erros['vagas']) ? $erros['vagas'] : ''; ?></span>
             </div>
 
             <div class="campo">
                 <label class="label_formulario" for="descricao">Descrição:</label>
-                <textarea id="descricao" rows="5" name="descricao" placeholder="Descrição da turma"><?php echo $resultado->desc_turma; ?></textarea>
-                <span class="erro"><?php echo isset($erros['descricao']) ? $erros['descricao'] : ''; ?></span>
+                <textarea id="descricao" rows="5" name="descricao" placeholder="Descrição da turma"><?= $resultado->desc_turma; ?></textarea>
+                <span class="erro"><?= isset($erros['descricao']) ? $erros['descricao'] : ''; ?></span>
             </div>
 
             <button type="submit">Atualizar</button>

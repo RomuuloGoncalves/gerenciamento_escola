@@ -40,23 +40,23 @@ $resultado = $aluno->selecionarAlunoID($id);
     <div class="container">
         <div id="title">Editar Aluno</div>
         <form action="../functions/realizarEdicaoAluno.php" method="POST">
-            <input type="hidden" id="id" name="id" value="<?php echo $resultado->id_aluno; ?>" placeholder="<?php echo $resultado->nome_aluno; ?>">
+            <input type="hidden" id="id" name="id" value="<?= $resultado->id_aluno; ?>" placeholder="<?= $resultado->nome_aluno; ?>">
             <div class="campo">
                 <label class="label_formulario" for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value="<?php echo $resultado->nome_aluno; ?>" placeholder="<?php echo $resultado->nome_aluno; ?>">
-                <span class="erro"><?php echo isset($erros['nome']) ? $erros['nome'] : ''; ?></span>
+                <input type="text" id="nome" name="nome" value="<?= $resultado->nome_aluno; ?>" placeholder="<?= $resultado->nome_aluno; ?>">
+                <span class="erro"><?= isset($erros['nome']) ? $erros['nome'] : ''; ?></span>
             </div>
 
             <div class="campo">
                 <label class="label_formulario" for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" value="<?php echo $resultado->cpf_aluno; ?>">
-                <span class="erro"><?php echo isset($erros['cpf']) ? $erros['cpf'] : ''; ?></span>
+                <input type="text" id="cpf" name="cpf" value="<?= $resultado->cpf_aluno; ?>">
+                <span class="erro"><?= isset($erros['cpf']) ? $erros['cpf'] : ''; ?></span>
             </div>
 
             <div class="campo">
                 <label class="label_formulario" for="data_nascimento">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" value="<?php echo $resultado->data_nasc; ?>">
-                <span class="erro"><?php echo isset($erros['data_nascimento']) ? $erros['data_nascimento'] : ''; ?></span>
+                <input type="date" id="data_nascimento" name="data_nascimento" value="<?= $resultado->data_nasc; ?>">
+                <span class="erro"><?= isset($erros['data_nascimento']) ? $erros['data_nascimento'] : ''; ?></span>
             </div>
 
             <button type="submit">Cadastrar</button>

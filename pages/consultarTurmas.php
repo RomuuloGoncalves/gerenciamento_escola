@@ -27,7 +27,7 @@ $resultado = $turmas->listarTurmas();
   </header>
 
   <main>
-  <input type="text" id="pesquisaInput" onkeyup="filtrarTabela()" placeholder="Pesquisar por nome...">
+    <input type="text" id="pesquisaInput" onkeyup="filtrarTabela()" placeholder="Pesquisar por nome...">
     <table id="tabelas_consultas">
       <thead>
         <tr>
@@ -41,34 +41,30 @@ $resultado = $turmas->listarTurmas();
         </tr>
       </thead>
       <tbody>
-        <?php
-        foreach ($resultado as $turma) {
-        ?>
+        <?php foreach ($resultado as $turma): ?>
           <tr>
-            <td><?= $turma->id_turma ?></td>
-            <td><?= $turma->nome_turma ?></td>
-            <td><?= $turma->numero_vagas ?></td>
-            <td><?= $turma->ano ?></td>
-            <td><?= $turma->desc_turma ?></td>
+            <td><?= $turma->id_turma; ?></td>
+            <td><?= $turma->nome_turma; ?></td>
+            <td><?= $turma->numero_vagas; ?></td>
+            <td><?= $turma->ano; ?></td>
+            <td><?= $turma->desc_turma; ?></td>
             <td>
               <div class="icones">
-                <a href="../pages/editarTurma.php?id=<?= $turma->id_turma ?>">
+                <a href="../pages/editarTurma.php?id=<?= $turma->id_turma; ?>">
                   <img src="../assets/imgs/editar.png" alt="">
                 </a>
               </div>
             </td>
-
             <td>
               <div class="icones">
-                <a href="../functions/realizarExclusaoTurma.php?id=<?= $turma->id_turma ?>">
+                <a href="../functions/realizarExclusaoTurma.php?id=<?= $turma->id_turma; ?>">
                   <img src="../assets/imgs/excluir.png" alt="">
                 </a>
               </div>
             </td>
           </tr>
-        <?php
-        }
-        ?>
+        <?php endforeach; ?>
+
       </tbody>
     </table>
   </main>

@@ -5,8 +5,7 @@ session_start();
 $idChamada = (int) $_SESSION['idChamada'];
 
 $alunos = new Aluno();
-$resultado = $alunos->listarAlunosComPresenca($idChamada);
-;?>
+$resultado = $alunos->listarAlunosComPresenca($idChamada);; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,17 +45,14 @@ $resultado = $alunos->listarAlunosComPresenca($idChamada);
         </tr>
       </thead>
       <tbody>
-        <?php
-        foreach ($resultado as $aluno) {
-        ?>
+        <?php foreach ($resultado as $aluno): ?>
           <tr>
-            <td><?= $aluno->id_aluno ?></td>
-            <td><?= $aluno->nome_aluno ?></td>
-            <td><?= $aluno->aluno_presente ? 'Presente' : 'Ausente' ?></td> 
+            <td><?= $aluno->id_aluno; ?></td>
+            <td><?= $aluno->nome_aluno; ?></td>
+            <td><?= $aluno->aluno_presente ? 'Presente' : 'Ausente'; ?></td>
           </tr>
-        <?php
-        }
-        ?>
+        <?php endforeach; ?>
+
       </tbody>
     </table>
   </main>

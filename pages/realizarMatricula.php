@@ -43,13 +43,10 @@ session_unset();
             <select name="id" id="turma">
                 <option selected>Selecionar</option>
 
-                <?php
-                foreach ($resultadoTurmas as $turma) {
-                ?>
-                    <option value="<?= $turma->id_turma ?>"><?= $turma->nome_turma ?></option>
-                <?php
-                }
-                ?>
+                <?php foreach ($resultadoTurmas as $turma): ?>
+                    <option value="<?= $turma->id_turma; ?>"><?= $turma->nome_turma; ?></option>
+                <?php endforeach; ?>
+
             </select>
             <button type="submit">Selecionar</button>
         </form>
@@ -69,20 +66,17 @@ session_unset();
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        foreach ($alunos as $aluno) {
-                        ?>
+                        <?php foreach ($alunos as $aluno): ?>
                             <tr>
-                                <td><?= $aluno->id_aluno ?></td>
-                                <td><?= $aluno->nome_aluno ?></td>
-                                <td><?= $aluno->cpf_aluno ?></td>
+                                <td><?= $aluno->id_aluno; ?></td>
+                                <td><?= $aluno->nome_aluno; ?></td>
+                                <td><?= $aluno->cpf_aluno; ?></td>
                                 <td class="checkbox_centro">
-                                    <input class="checkbox" type="checkbox" name="id_aluno[]" value="<?= $aluno->id_aluno ?>">
+                                    <input class="checkbox" type="checkbox" name="id_aluno[]" value="<?= $aluno->id_aluno; ?>">
                                 </td>
                             </tr>
-                        <?php
-                        }
-                        ?>
+                        <?php endforeach; ?>
+
                     </tbody>
                 </table>
                 <button type="submit">Finalizar</button>

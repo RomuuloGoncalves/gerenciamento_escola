@@ -41,33 +41,29 @@ $resultado = $alunos->listarAlunos();
         </tr>
       </thead>
       <tbody>
-        <?php
-        foreach ($resultado as $aluno) {
-        ?>
+        <?php foreach ($resultado as $aluno): ?>
           <tr>
-            <td><?= $aluno->id_aluno ?></td>
-            <td><?= $aluno->nome_aluno ?></td>
-            <td><?= $aluno->cpf_aluno ?></td>
-            <td><?= $aluno->data_nasc ?></td>
+            <td><?= $aluno->id_aluno; ?></td>
+            <td><?= $aluno->nome_aluno; ?></td>
+            <td><?= $aluno->cpf_aluno; ?></td>
+            <td><?= $aluno->data_nasc; ?></td>
             <td>
               <div class="icones">
-                <a href="../pages/editarAluno.php?id=<?= $aluno->id_aluno ?>">
+                <a href="../pages/editarAluno.php?id=<?= $aluno->id_aluno; ?>">
                   <img src="../assets/imgs/editar.png" alt="">
                 </a>
               </div>
             </td>
-
             <td>
               <div class="icones">
-                <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno ?>">
+                <a href="../functions/realizarExclusaoAluno.php?id=<?= $aluno->id_aluno; ?>">
                   <img src="../assets/imgs/excluir.png" alt="">
                 </a>
               </div>
             </td>
           </tr>
-        <?php
-        }
-        ?>
+        <?php endforeach; ?>
+
       </tbody>
     </table>
   </main>
