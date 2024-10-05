@@ -42,7 +42,7 @@ session_unset();
             <label for="turma">Escolha uma turma para realizar a chamada:</label>
 
             <select name="id" id="turma">
-                <option selected>Selecionar</option>
+                <option disabled>Selecionar</option>
 
                 <?php foreach ($resultadoTurmas as $turma): ?>
                     <option value="<?= $turma->id_turma; ?>"><?= $turma->nome_turma; ?></option>
