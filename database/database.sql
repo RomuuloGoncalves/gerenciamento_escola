@@ -55,26 +55,26 @@ CREATE TABLE presenca_chamada (
 
 -- Inserindo 20 alunos
 INSERT INTO alunos (nome_aluno, cpf_aluno, data_nasc) VALUES
-('Ana Silva', '12345678901', '2005-05-15'),
-('Bruno Oliveira', '12345678902', '2006-06-20'),
-('Carlos Santos', '12345678903', '2005-07-30'),
-('Daniela Costa', '12345678904', '2004-08-10'),
-('Eduardo Lima', '12345678905', '2006-09-25'),
-('Fernanda Pereira', '12345678906', '2005-10-05'),
-('Gustavo Almeida', '12345678907', '2006-11-15'),
-('Helena Martins', '12345678908', '2005-12-20'),
-('Igor Rodrigues', '12345678909', '2004-01-30'),
-('Juliana Ferreira', '12345678910', '2005-02-10'),
-('Lucas Almeida', '12345678911', '2006-03-20'),
-('Mariana Soares', '12345678912', '2005-04-05'),
-('Nicolas Rocha', '12345678913', '2006-05-15'),
-('Olívia Dias', '12345678914', '2005-06-30'),
-('Paulo Souza', '12345678915', '2006-07-20'),
-('Rafaela Gomes', '12345678916', '2005-08-15'),
-('Samuel Mendes', '12345678917', '2006-09-10'),
-('Tatiane Martins', '12345678918', '2005-10-25'),
-('Vinícius Lima', '12345678919', '2006-11-05'),
-('Yasmin Santos', '12345678920', '2005-12-15');
+('Ana Silva', '78133674050', '2005-05-15'),
+('Bruno Oliveira', '48949871041', '2006-06-20'),
+('Carlos Santos', '75157234082', '2005-07-30'),
+('Daniela Costa', '99187149052', '2004-08-10'),
+('Eduardo Lima', '28965003083', '2006-09-25'),
+('Fernanda Pereira', '96717585099', '2005-10-05'),
+('Gustavo Almeida', '35742626045', '2006-11-15'),
+('Helena Martins', '81497549035', '2005-12-20'),
+('Igor Rodrigues', '05819025059', '2004-01-30'),
+('Juliana Ferreira', '40792993039', '2005-02-10'),
+('Lucas Almeida', '36830927005', '2006-03-20'),
+('Mariana Soares', '97411471046', '2005-04-05'),
+('Nicolas Rocha', '91468651013', '2006-05-15'),
+('Olívia Dias', '94680870001', '2005-06-30'),
+('Paulo Souza', '36246722075', '2006-07-20'),
+('Rafaela Gomes', '95844399013', '2005-08-15'),
+('Samuel Mendes', '19705492034', '2006-09-10'),
+('Tatiane Martins', '28742491061', '2005-10-25'),
+('Vinícius Lima', '19348867008', '2006-11-05'),
+('Yasmin Santos', '14978870038', '2005-12-15');
 
 -- Inserindo 20 turmas
 INSERT INTO turmas (nome_turma, ano, numero_vagas, desc_turma) VALUES
