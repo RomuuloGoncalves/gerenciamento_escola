@@ -46,13 +46,13 @@ if (!empty($erros)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="2;url=../pages/cadastroTurma.php"> 
-    <title>Cadastro de Aluno</title>
+    <title>Cadastro de Turma</title>
     <link rel="stylesheet" href="../assets/style/feedbackAcoes.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Aluno Cadastrado com Sucesso!</h1>
+        <h1>Turma Cadastrada com Sucesso!</h1>
         <p>Você será redirecionado para o formulário de cadastro em 2 segundos.</p>
     </div>
 </body>

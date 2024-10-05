@@ -56,7 +56,7 @@ if (!empty($erros)) {
 
 <body>
     <div class="container">
-        <h1>Turma atualizada com Sucesso!</h1>
+        <h1>Informações atualizada com Sucesso!</h1>
         <p>Você será redirecionado para o formulário de cadastro em 2 segundos.</p>
     </div>
 </body>
