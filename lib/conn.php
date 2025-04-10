@@ -3,9 +3,9 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 $host = "localhost"; // endereço do servidor
-$database = "gerenciamento_escola"; // nome do banco de dados
-$usuario = "romulo"; // usuário do MySQL
-$senha = "romulo123"; // senha do MySQL
+$database = ""; // nome do banco de dados
+$usuario = ""; // usuário do MySQL
+$senha = ""; // senha do MySQL
 
 // Cria a conexão
 try {
